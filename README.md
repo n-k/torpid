@@ -5,8 +5,9 @@ Tiny linux utility to turn CPU cores on/off
 cargo install --force torpid
 
 ## Usage
-See `torpid --help`, it should output something like:
+`sudo torpid <number of cores to enable>`. E.g: `sudo torpid 4`, will keep 4 cores on and turn others off.
 
+Also see `torpid --help`, it should output something like:
 ```
 torpid 0.1.0
 Nipun Kumar <nipunkumar@outlook.com>
