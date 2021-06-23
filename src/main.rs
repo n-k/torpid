@@ -1,12 +1,17 @@
 use clap::{App, Arg};
 
+const HELP_TEXT: &str = "Number of cores to enable. 
+Must be within 1 <= ... <= number of cores present.";
+
+#[cfg(target_os="linux")]
 fn main() {
     let matches = App::new("torpid")
-        .version("0.1")
+        .version("0.1.0")
         .author("Nipun Kumar <nipunkumar@outlook.com>")
         .about("Turn off some CPU cores")
         .arg(
             Arg::with_name("NUM_CPU_CORES")
+                .help(HELP_TEXT)
                 .required(true)
                 .takes_value(true),
         )
