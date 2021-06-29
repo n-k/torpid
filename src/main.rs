@@ -40,7 +40,7 @@ fn main() {
     let _min = parts[0].trim().parse::<usize>().unwrap();
     let max = parts[1].trim().parse::<usize>().unwrap();
 
-    if num > max {
+    if num > max + 1 {
         panic!("Argument NUM_CPU_CORES should be <= {}", max + 1);
     }
 
